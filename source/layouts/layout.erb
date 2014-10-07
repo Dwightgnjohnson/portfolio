@@ -10,52 +10,20 @@
     <title><%= current_page.data.title || "Dwight's Ironyard Portfolio 2014" %></title>
 
     <%= stylesheet_link_tag "all" %>
+     <script src="//oss.maxcdn.com/jquery/2.1.1/jquery.js"></script>
     <%= javascript_include_tag  "all" %>
   </head>
 
   <body class="<%= page_classes %>">
   <div class="wrapper-for-content-outside-of-footer">
-  <header class="centered-navigation">
-  <div class="centered-navigation-wrapper">
-    <a href="javascript:void(0)" class="mobile-logo"><%= image_tag 'foggy3.png' %></a>
-    <a href="" class="centered-navigation-menu-button">MENU</a>
-    <ul class="centered-navigation-menu">
-      <li class="nav-link logo"><a href="javascript:void(0)" class="logo"><%= image_tag 'foggy3.png' %></a></li>
-      <li class="nav-link"><a href="http://www.designsbydwight.com/">Blog</a></li>
-      <li class="nav-link"><a href="https://github.com/Dwightgnjohnson">Github</a></li>
-      <li class="nav-link"><a href="https://twitter.com/DwightGNJohnson">Twitter</a></li>
-    </ul>
-  </div>
-</header>
-
+    <%= partial "layouts/header" %>
 
     <%= yield %>
 
   <div class="push"></div>
 </div>
 
-<footer class="footer-2">
-  <div class="footer-logo">
-    <%= image_tag 'foggy3.png' %>
-  </div>
-    <ul>
-      <li><a href="http://www.designsbydwight.com/">Blog</a></li>
-      <li><a href="https://github.com/Dwightgnjohnson">Github</a></li>
-      <li><a href="https://twitter.com/DwightGNJohnson">Twitter</a></li>
-    </ul>
-
-    <div class="footer-secondary-links">
-      <ul>
-
-      </ul>
-
-      <ul class="footer-social">
-        <li><a href="https://twitter.com/DwightGNJohnson">
-          <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/twitter-logo-circle.png" alt="Twitter">
-        </a></li>
-      </ul>
-    </div>
-</footer>
+<%= partial "layouts/footer" %>
 
 
   </body>
